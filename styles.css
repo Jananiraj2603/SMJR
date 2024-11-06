@@ -1,0 +1,175 @@
+/* General reset and styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  padding: 20px;
+  text-align: center;
+}
+body{
+  background-color: #e4fcbe;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.home-section {
+  color:black;
+  text-align: center;
+  padding: 20px 20px;
+  margin:20px ;
+}
+
+.image-upload {
+  margin-top: 30px;
+}
+
+.image-upload input[type="file"] {
+  margin: 30px 0;
+}
+
+.contact-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section input {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+button {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0eae6;
+}
+.creations-section {
+  padding: 30px;
+  text-align: center;
+  background-color:white;
+  color: #333;
+}
+
+.gallery h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-name {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .gallery-image {
+    width: 100px;
+  }
+}
+
+.popup {
+  display: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.todo-section {
+  padding: 40px;
+  text-align: center;
+}
+
+#todoList {
+  list-style: none;
+  padding: 10px;
+}
+
+#todoList li {
+  margin: 5px 0;
+}
+
+#todoInput {
+  margin-top: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+footer {
+  background-color: rgba(248, 215, 181, 0.8);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive layout using CSS Grid */
+@media (max-width: 768px) {
+  .home-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-section form {
+    width: 100%;
+  }
+
+  #todoInput {
+    width: 100%;
+  }
+}

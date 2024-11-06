@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header with navigation -->
+  <header class="header">
+    <h1>Delicious Bakery</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#todo">To-do-list</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area with background -->
+  <section id="home" class="home-section">
+    <h2>Welcome to Our Bakery!</h2><br>
+    <p>Freshly baked goods every day, just for you.</p><br>
+    <img src="images/bakery.jpg" alt="Bakery Image" width="400px">
+    <!-- Image upload section -->
+    <section class="image-upload">
+      <h3>Upload Bakery Images</h3>
+      <input type="file" id="imageUpload" accept="image/*">
+      <button onclick="removeImage()">Remove Image</button>
+      <div id="imageContainer"></div>
+    </section>
+  </section>
+  <!-- Menu Section -->
+  <section class="creations-section" id="menu">
+    <h2>Menu</h2>
+    <div class="gallery-images">
+      <div class="gallery-item">
+        <img src="images/cakes.jpg" alt="Cake" class="gallery-image">
+        <p class="menu-item-name">Cakes</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/bakery-bread.jpg" alt="Bread" class="gallery-image">
+        <p class="menu-item-name">Bread</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/biscuit.jpg" alt="Biscuit" class="gallery-image">
+        <p class="menu-item-name">Biscuit</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/cup cakes.jpg" alt="Cup Cakes" class="gallery-image">
+        <p class="menu-item-name">Cup Cakes</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/egg_puff.jpg" alt="Egg Puff" class="gallery-image">
+        <p class="menu-item-name">Egg Puff</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact form -->
+  <section id="contact" class="contact-section">
+    <h3>Contact Us</h3>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required><br>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="popup" class="popup">
+      <p>Form submitted successfully!</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </section>
+
+  <!-- To-Do List Section -->
+  <section id="todo" class="todo-section">
+    <h3>To-Do List</h3>
+    <ul id="todoList">
+      <li><input type="checkbox"> Order Ingredients</li>
+      <li><input type="checkbox"> Bake Cakes</li>
+      <li><input type="checkbox"> Pack Orders</li>
+    </ul>
+    <input type="text" id="todoInput" placeholder="Add a new task">
+    <button onclick="addTodo()">Add Task</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Delicious Bakery</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
